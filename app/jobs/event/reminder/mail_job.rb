@@ -1,7 +1,11 @@
 class Event::Reminder::MailJob < ApplicationJob
-  queue_as :default
+  queue_as :reminder_mail
 
-  def perform(*args)
-    # Do something later
+  def self.schedule(mail)
+    set(wait_until: mail.will_send_mail_at).perform_later(mail)
+  end
+
+  def perform(mail)
+    mail.send_mail
   end
 end

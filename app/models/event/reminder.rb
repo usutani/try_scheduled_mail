@@ -21,7 +21,7 @@ module Event::Reminder
     cancel_non_canceled_reminder_mails
     return if canceled?
     mail = Event::Reminder::Mail.create event: self
-    # TODO Event::Reminder::MailJob.schedule(mail)
+    Event::Reminder::MailJob.schedule(mail)
     mail
   end
 
