@@ -1,9 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  event: one
-  member: one
+schedule1:
+  event: event1_not_canceled
+  member: member1_not_deactivated
 
-two:
-  event: two
-  member: two
+schedule2:
+  event: event1_not_canceled
+  member: member2_deactivated
+
+schedule3:
+  event: event2_canceled
+  member: member1_not_deactivated
+
+schedule4:
+  event: event2_canceled
+  member: member2_deactivated

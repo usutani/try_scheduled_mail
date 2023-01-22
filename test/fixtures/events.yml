@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  started_at: 2023-01-22 14:16:14
-  canceled_at: 2023-01-22 14:16:14
+event1_not_canceled:
+  name: event1_not_canceled
+  started_at: 2023-01-10 12:23:45
+  canceled_at: nil
 
-two:
-  name: MyString
-  started_at: 2023-01-22 14:16:14
-  canceled_at: 2023-01-22 14:16:14
+event2_canceled:
+  name: event2_canceled
+  started_at: 2023-02-20 18:00:30
+  canceled_at: 2023-01-15 08:12:34

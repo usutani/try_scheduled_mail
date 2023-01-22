@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  event: one
-  canceled_at: 2023-01-22 14:16:16
+event1_not_canceled__mail1_canceled:
+  event: event1_not_canceled
+  canceled_at: 2023-01-14 15:28:18
 
-two:
-  event: two
-  canceled_at: 2023-01-22 14:16:16
+event1_not_canceled__mail2_not_canceled:
+  event: event1_not_canceled
+  canceled_at: nil
+
+event2_canceled__mail1_not_canceled:
+  event: event2_canceled
+  canceled_at: nil

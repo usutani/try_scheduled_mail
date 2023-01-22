@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  email: MyString
-  deactivated_at: 2023-01-22 14:16:13
+member1_not_deactivated:
+  email: member1_not_deactivated@example.org
+  deactivated_at: nil
 
-two:
-  email: MyString
-  deactivated_at: 2023-01-22 14:16:13
+member2_deactivated:
+  email: member2_deactivated@example.org
+  deactivated_at: 2023-01-14 15:28:15
