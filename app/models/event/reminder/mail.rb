@@ -4,9 +4,9 @@ class Event::Reminder::Mail < ApplicationRecord
   scope :non_canceled, -> { where(canceled_at: nil) }
 
   # イベントの開始日時の1日前
-  # TODO def will_send_mail_at
-  #   event.started_at - Event::Reminder::REMIND_BEFORE
-  # end
+  def will_send_mail_at
+    event.started_at - Event::Reminder::REMIND_BEFORE
+  end
 
   def send_mail
     Event::Reminder::MailSender.new(self).run

@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  # TODO include Event::Reminder
+  include Event::Reminder
 
   validates :started_at, presence: true
 
