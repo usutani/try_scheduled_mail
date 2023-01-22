@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  time:
+    formats:
+      mail_subject: "%Y/%m/%d %H:%M"
