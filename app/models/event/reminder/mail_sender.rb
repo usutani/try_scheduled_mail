@@ -21,7 +21,6 @@ class Event::Reminder::MailSender
 
   # イベントの開始日時の1日前以降はtrueを返す。
   def due?
-    true
-    # TODO @mail.event.started_at <= Event::Reminder::REMIND_BEFORE.since
+    @mail.event.started_at <= Event::Reminder::REMIND_BEFORE.since
   end
 end

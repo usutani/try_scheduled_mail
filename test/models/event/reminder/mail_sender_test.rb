@@ -1,8 +1,6 @@
 require "test_helper"
 
 class Event::Reminder::MailSenderTest < ActiveSupport::TestCase
-# TODO
-=begin
   test "due?" do
     e1m1 = event_reminder_mails(:event1_not_canceled__mail1_canceled)
     ms = Event::Reminder::MailSender.new(e1m1)
@@ -30,7 +28,6 @@ class Event::Reminder::MailSenderTest < ActiveSupport::TestCase
     travel_to(e1m1.event.started_at.next_month)
     assert ms.due?, "開始日時の一ヶ月後: 期限後"
   end
-=end
 
   test "canceled?" do
     e1m1 = event_reminder_mails(:event1_not_canceled__mail1_canceled)
@@ -52,7 +49,7 @@ class Event::Reminder::MailSenderTest < ActiveSupport::TestCase
     e1m2 = event_reminder_mails(:event1_not_canceled__mail2_not_canceled)
     ms2 = Event::Reminder::MailSender.new(e1m2)
     travel_to(e1m2.event.started_at.prev_day(2))
-    # TODO assert_not ms2.possible?, "メール送信は不可能"
+    assert_not ms2.possible?, "メール送信は不可能"
     travel_to(e1m2.event.started_at.prev_day)
     assert ms2.possible?
   end
